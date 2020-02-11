@@ -8,6 +8,8 @@ editor_options:
   chunk_output_type: console
 ---
 
-Follow the links to below to review the exploratory data analyses.
+Follow the links to below to review the results of the analyses.
 
 + [Analysis of BMD in HMDP mice.](hmdp.html)
+
++ [Analysis of BMD in CFW mice.](cfw.html)
