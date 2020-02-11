@@ -30,6 +30,14 @@ Load data
 Read the BMD data from the CFW study.
 
 ```{r read-data}
-cfw <- read.csv("../data/hmdp.csv",stringsAsFactors = FALSE)
+cfw <- read.csv("../data/cfw.csv",stringsAsFactors = FALSE)
 ```
 
+Plot distribution of BMD
+------------------------
+
+Plot distribution of BMD in CFW males (as measured in femurs).
+
+```{r plot-bmd, message=FALSE, fig.width=4.5, fig.height=3.5}
+plot_bmd_histogram(cfw,"BMD")
+```
