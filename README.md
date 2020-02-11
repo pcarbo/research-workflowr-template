@@ -1,9 +1,5 @@
 # {{name}}
 
-A [workflowr][] project.
-
-* `pages` - R Markdown documents
-* `public` - website (HTML, CSS, JS)
-* `src` - source code
+A [workflowr][workflowr] project.
 
 [workflowr]: https://github.com/jdblischak/workflowr

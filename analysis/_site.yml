@@ -1,17 +1,14 @@
-name: "{{name}}"
-output_dir: ../public
+name: Research project
+output_dir: ../docs
 navbar:
-  title: "{{name}}"
-  left:
-  - text: Home
-    href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  title: Research project
+  right:
+    - text: source
+      href: https://github.com/pcarbo/research-workflowr-template
 output:
   workflowr::wflow_html:
-    toc: yes
-    toc_float: yes
-    theme: cosmo
+    toc: no
+    theme: readable
     highlight: textmate
+    code_folding: none
+    self_contained: no
