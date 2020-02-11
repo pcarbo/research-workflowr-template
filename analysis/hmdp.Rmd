@@ -1,12 +1,14 @@
 ---
-title: "Add title here"
+title: "Analysis of BMD in HMDP mice"
 author: "Peter Carbonetto"
 date: February 11, 2020
 site: workflowr::wflow_site
 output: workflowr::wflow_html
 ---
 
-*Add summary here.*
+Here we examine data on bone-mineral density (BMD) from measurements
+taken in a "reference" mouse population, the Hybrid Mouse Diversity
+Panel.
 
 ```{r knitr, echo=FALSE}
 knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
@@ -37,11 +39,10 @@ Plot distribution of BMD
 
 Plot distribution of BMD in males (as measured in femurs).
 
-```{r plot-bmd-females}
+```{r plot-bmd-females, message=FALSE, fig.width=4, fig.height=4}
 ggplot(hmdp,aes(x = femur)) +
   geom_histogram(color = "white",fill = "darkblue",na.rm = TRUE) +
   labs(x = "BMD (mg/cm^2)") +
   theme_cowplot()
 ```
 
-*Add text summarizing analysis.*
