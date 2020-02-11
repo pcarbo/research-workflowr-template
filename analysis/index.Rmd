@@ -1,5 +1,5 @@
 ---
-title: "Research overview"
+title: "Project overview"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,7 +8,8 @@ editor_options:
   chunk_output_type: console
 ---
 
-Follow the links to below to review the results of the analyses.
+Follow the links to below to review the results of the individual
+analyses.
 
 + [Analysis of BMD in HMDP mice.](hmdp.html)
 
