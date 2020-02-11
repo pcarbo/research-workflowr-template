@@ -18,11 +18,12 @@ knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
 Load packages
 -------------
 
-Load a couple packages used in the analysis below.
+Load packages and function used in the analysis below.
 
 ```{r load-pkgs, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(cowplot)
+source("../code/plots.R")
 ```
 
 Load data
