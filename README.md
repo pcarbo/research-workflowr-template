@@ -1,2 +1,9 @@
-# research-workflowr-template
-A prototype workflowr template for my research projects.
+# {{name}}
+
+A [workflowr][] project.
+
+* `pages` - R Markdown documents
+* `public` - website (HTML, CSS, JS)
+* `src` - source code
+
+[workflowr]: https://github.com/jdblischak/workflowr
