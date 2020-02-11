@@ -416,22 +416,18 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree0de9686b83a6d32b1e3bd4fb74e00b76034ec912targetblank0de9686a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/0de9686b83a6d32b1e3bd4fb74e00b76034ec912" target="_blank">0de9686</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1ff8afb82c6db5b9b8eb959fc96c29a0748e2bectargetblank1ff8afba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/1ff8afb82c6db5b9b8eb959fc96c29a0748e2bec" target="_blank">1ff8afb</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree0de9686b83a6d32b1e3bd4fb74e00b76034ec912targetblank0de9686a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1ff8afb82c6db5b9b8eb959fc96c29a0748e2bectargetblank1ff8afba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Untracked files:
-    Untracked:  analysis/cfw.Rmd~
-
 Unstaged changes:
     Modified:   analysis/hmdp.Rmd
-    Modified:   analysis/index.Rmd
-    Modified:   code/README
+    Modified:   code/plots.R
 
 </code></pre>
 <p>
@@ -475,6 +471,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/1ff8afb82c6db5b9b8eb959fc96c29a0748e2bec/analysis/cfw.Rmd" target="_blank">1ff8afb</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+wflow_publish(“cfw.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/research-workflowr-template/d190f63726079e8eeab7b0b7fb2807ffc429093a/docs/cfw.html" target="_blank">d190f63</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Built cfw analysis for first time.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/pcarbo/research-workflowr-template/blob/0de9686b83a6d32b1e3bd4fb74e00b76034ec912/analysis/cfw.Rmd" target="_blank">0de9686</a>
 </td>
 <td>
@@ -505,7 +535,13 @@ source(&quot;../code/plots.R&quot;)</code></pre>
 <div id="load-data" class="section level2">
 <h2>Load data</h2>
 <p>Read the BMD data from the CFW study.</p>
-<pre class="r"><code>cfw &lt;- read.csv(&quot;../data/hmdp.csv&quot;,stringsAsFactors = FALSE)</code></pre>
+<pre class="r"><code>cfw &lt;- read.csv(&quot;../data/cfw.csv&quot;,stringsAsFactors = FALSE)</code></pre>
+</div>
+<div id="plot-distribution-of-bmd" class="section level2">
+<h2>Plot distribution of BMD</h2>
+<p>Plot distribution of BMD in CFW males (as measured in femurs).</p>
+<pre class="r"><code>plot_bmd_histogram(cfw,&quot;BMD&quot;)</code></pre>
+<p><img src="figure/cfw.Rmd/plot-bmd-1.png" width="432" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -538,11 +574,11 @@ source(&quot;../code/plots.R&quot;)</code></pre>
 # [13] pkgconfig_2.0.3  rlang_0.4.2      yaml_2.2.0       xfun_0.11       
 # [17] withr_2.1.2      stringr_1.4.0    dplyr_0.8.3      knitr_1.26      
 # [21] fs_1.3.1         rprojroot_1.3-2  grid_3.6.2       tidyselect_0.2.5
-# [25] glue_1.3.1       R6_2.4.1         rmarkdown_2.0    purrr_0.3.3     
-# [29] magrittr_1.5     whisker_0.4      backports_1.1.5  scales_1.1.0    
-# [33] promises_1.1.0   htmltools_0.4.0  assertthat_0.2.1 colorspace_1.4-1
-# [37] httpuv_1.5.2     stringi_1.4.3    lazyeval_0.2.2   munsell_0.5.0   
-# [41] crayon_1.3.4</code></pre>
+# [25] glue_1.3.1       R6_2.4.1         rmarkdown_2.0    farver_2.0.1    
+# [29] purrr_0.3.3      magrittr_1.5     whisker_0.4      backports_1.1.5 
+# [33] scales_1.1.0     promises_1.1.0   htmltools_0.4.0  assertthat_0.2.1
+# [37] colorspace_1.4-1 httpuv_1.5.2     labeling_0.3     stringi_1.4.3   
+# [41] lazyeval_0.2.2   munsell_0.5.0    crayon_1.3.4</code></pre>
 </div>
 </div>
 
