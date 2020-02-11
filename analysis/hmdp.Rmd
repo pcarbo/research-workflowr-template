@@ -39,7 +39,7 @@ Plot distribution of BMD
 
 Plot distribution of BMD in males (as measured in femurs).
 
-```{r plot-bmd-females, message=FALSE, fig.width=4, fig.height=4}
+```{r plot-bmd-females, message=FALSE, fig.width=4.5, fig.height=3.5}
 ggplot(hmdp,aes(x = femur)) +
   geom_histogram(color = "white",fill = "darkblue",na.rm = TRUE) +
   labs(x = "BMD (mg/cm^2)") +
