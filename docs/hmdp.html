@@ -416,22 +416,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetreed452c72964f7b1583bd32c529db5a6dd0fbfc819targetblankd452c72a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/d452c72964f7b1583bd32c529db5a6dd0fbfc819" target="_blank">d452c72</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree19444684d6fb388909d119351dd3452fc350549dtargetblank1944468a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/19444684d6fb388909d119351dd3452fc350549d" target="_blank">1944468</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetreed452c72964f7b1583bd32c529db5a6dd0fbfc819targetblankd452c72a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree19444684d6fb388909d119351dd3452fc350549dtargetblank1944468a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Untracked files:
-    Untracked:  analysis/cfw.Rmd~
-
-Unstaged changes:
-    Modified:   analysis/index.Rmd
-    Modified:   code/README
-
+working directory clean
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -469,6 +463,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/b36e1b3d919e9dc51bc5f060c79516c12ca77cdf/analysis/hmdp.Rmd" target="_blank">b36e1b3</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Wrote function plot_bmd_histogram.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/research-workflowr-template/d1acbceee9fb3031d1f8514f59f11ed2db704a19/docs/hmdp.html" target="_blank">d1acbce</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Adjusted figure dimensions in hmdp analysis.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -593,60 +621,9 @@ source(&quot;../code/plots.R&quot;)</code></pre>
 </div>
 <div id="plot-distribution-of-bmd" class="section level2">
 <h2>Plot distribution of BMD</h2>
-<p>Plot distribution of BMD in males (as measured in femurs).</p>
-<pre class="r"><code>ggplot(hmdp,aes(x = femur)) +
-  geom_histogram(color = &quot;white&quot;,fill = &quot;darkblue&quot;,na.rm = TRUE) +
-  labs(x = &quot;BMD (mg/cm^2)&quot;) +
-  theme_cowplot()</code></pre>
-<p><img src="figure/hmdp.Rmd/plot-bmd-females-1.png" width="432" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-bmd-females-1">
-Past versions of plot-bmd-females-1.png
-</button>
-</p>
-<div id="fig-plot-bmd-females-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/pcarbo/research-workflowr-template/blob/957c904abc8ffebbb009dfd24395b28c85651871/docs/figure/hmdp.Rmd/plot-bmd-females-1.png" target="_blank">957c904</a>
-</td>
-<td>
-Peter Carbonetto
-</td>
-<td>
-2020-02-11
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/pcarbo/research-workflowr-template/blob/2a2ae5775e4fe8e873bb58a0fbd1be53e357be5e/docs/figure/hmdp.Rmd/plot-bmd-females-1.png" target="_blank">2a2ae57</a>
-</td>
-<td>
-Peter Carbonetto
-</td>
-<td>
-2020-02-11
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<p>Plot the distribution of BMD in HMDP male mice (measured in their femurs).</p>
+<pre class="r"><code>plot_bmd_histogram(hmdp,&quot;femur&quot;)</code></pre>
+<p><img src="figure/hmdp.Rmd/plot-bmd-1.png" width="432" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">

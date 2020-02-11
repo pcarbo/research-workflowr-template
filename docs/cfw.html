@@ -416,19 +416,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1ff8afb82c6db5b9b8eb959fc96c29a0748e2bectargetblank1ff8afba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/1ff8afb82c6db5b9b8eb959fc96c29a0748e2bec" target="_blank">1ff8afb</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree19444684d6fb388909d119351dd3452fc350549dtargetblank1944468a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/19444684d6fb388909d119351dd3452fc350549d" target="_blank">1944468</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1ff8afb82c6db5b9b8eb959fc96c29a0748e2bectargetblank1ff8afba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree19444684d6fb388909d119351dd3452fc350549dtargetblank1944468a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Unstaged changes:
-    Modified:   analysis/hmdp.Rmd
-    Modified:   code/plots.R
-
+working directory clean
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -466,6 +463,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/19444684d6fb388909d119351dd3452fc350549d/analysis/cfw.Rmd" target="_blank">1944468</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+wflow_publish(c(“index.Rmd”, “cfw.Rmd”, “hmdp.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/b36e1b3d919e9dc51bc5f060c79516c12ca77cdf/analysis/cfw.Rmd" target="_blank">b36e1b3</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Wrote function plot_bmd_histogram.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/research-workflowr-template/b18001ec2366a8bcc7f364a0ddc17fa6f945db74/docs/cfw.html" target="_blank">b18001e</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Re-built cfw analysis after creating plot_bmd_histogram function.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -524,7 +572,7 @@ wflow_publish(“cfw.Rmd”)
 </div>
 </div>
 </div>
-<p><em>Add text here.</em></p>
+<p>Here we examine bone-mineral density (BMD) data from measurements taken in the “Carworth-Farms-White” (CFW) outbred mouse population.</p>
 <div id="load-packages" class="section level2">
 <h2>Load packages</h2>
 <p>Load packages and function used in the analysis below.</p>
@@ -539,9 +587,47 @@ source(&quot;../code/plots.R&quot;)</code></pre>
 </div>
 <div id="plot-distribution-of-bmd" class="section level2">
 <h2>Plot distribution of BMD</h2>
-<p>Plot distribution of BMD in CFW males (as measured in femurs).</p>
+<p>Plot the distribution of BMD in CFW male mice (measured in their femurs).</p>
 <pre class="r"><code>plot_bmd_histogram(cfw,&quot;BMD&quot;)</code></pre>
 <p><img src="figure/cfw.Rmd/plot-bmd-1.png" width="432" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-bmd-1">
+Past versions of plot-bmd-1.png
+</button>
+</p>
+<div id="fig-plot-bmd-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/b18001ec2366a8bcc7f364a0ddc17fa6f945db74/docs/figure/cfw.Rmd/plot-bmd-1.png" target="_blank">b18001e</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>From this histogram, we see that the CFW mice exhibit a “long tail” of abnormally high, or “osteopetrotic”, bones.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
