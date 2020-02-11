@@ -6,7 +6,8 @@ site: workflowr::wflow_site
 output: workflowr::wflow_html
 ---
 
-*Add text here.*
+Here we examine bone-mineral density (BMD) data from measurements
+taken in the "Carworth-Farms-White" (CFW) outbred mouse population.
 
 ```{r knitr, echo=FALSE}
 knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
@@ -42,3 +43,6 @@ femurs).
 ```{r plot-bmd, message=FALSE, fig.width=4.5, fig.height=3.5}
 plot_bmd_histogram(cfw,"BMD")
 ```
+
+From this histogram, we see that the CFW mice exhibit a "long tail" of
+abnormally high, or "osteopetrotic", bones.
