@@ -1,0 +1,35 @@
+---
+title: "Analysis of BMD in CFW mice"
+author: "Peter Carbonetto"
+date: February 11, 2020
+site: workflowr::wflow_site
+output: workflowr::wflow_html
+---
+
+*Add text here.*
+
+```{r knitr, echo=FALSE}
+knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
+                      fig.align = "center")
+```
+
+Load packages
+-------------
+
+Load packages and function used in the analysis below.
+
+```{r load-pkgs, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(cowplot)
+source("../code/plots.R")
+```
+
+Load data
+---------
+
+Read the BMD data from the CFW study.
+
+```{r read-data}
+cfw <- read.csv("../data/hmdp.csv",stringsAsFactors = FALSE)
+```
+
