@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Research overview"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,4 +8,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Follow the links to below to review the exploratory data analyses.
+
++ [Analysis of BMD in HMDP mice.](hmdp.html)
