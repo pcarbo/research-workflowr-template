@@ -38,12 +38,9 @@ hmdp <- read.csv("../data/hmdp.csv",stringsAsFactors = FALSE)
 Plot distribution of BMD
 ------------------------
 
-Plot distribution of BMD in males (as measured in femurs).
+Plot the distribution of BMD in HMDP male mice (measured in their
+femurs).
 
-```{r plot-bmd-females, message=FALSE, fig.width=4.5, fig.height=3.5}
-ggplot(hmdp,aes(x = femur)) +
-  geom_histogram(color = "white",fill = "darkblue",na.rm = TRUE) +
-  labs(x = "BMD (mg/cm^2)") +
-  theme_cowplot()
+```{r plot-bmd, message=FALSE, fig.width=4.5, fig.height=3.5}
+plot_bmd_histogram(hmdp,"femur")
 ```
-

@@ -36,7 +36,8 @@ cfw <- read.csv("../data/cfw.csv",stringsAsFactors = FALSE)
 Plot distribution of BMD
 ------------------------
 
-Plot distribution of BMD in CFW males (as measured in femurs).
+Plot the distribution of BMD in CFW male mice (measured in their
+femurs).
 
 ```{r plot-bmd, message=FALSE, fig.width=4.5, fig.height=3.5}
 plot_bmd_histogram(cfw,"BMD")
