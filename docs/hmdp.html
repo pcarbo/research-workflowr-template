@@ -13,7 +13,7 @@
 
 <meta name="date" content="2020-02-11" />
 
-<title>Add title here</title>
+<title>Analysis of BMD in HMDP mice</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
@@ -298,7 +298,7 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">Add title here</h1>
+<h1 class="title toc-ignore">Analysis of BMD in HMDP mice</h1>
 <h4 class="author">Peter Carbonetto</h4>
 <h4 class="date">February 11, 2020</h4>
 
@@ -416,10 +416,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree39e072f1330d41354c0913bfc3551ea2ca0370d3targetblank39e072fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/39e072f1330d41354c0913bfc3551ea2ca0370d3" target="_blank">39e072f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1e3ab5accd8d2416f2e22930ca2ab2dd5637db8etargetblank1e3ab5aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/1e3ab5accd8d2416f2e22930ca2ab2dd5637db8e" target="_blank">1e3ab5a</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree39e072f1330d41354c0913bfc3551ea2ca0370d3targetblank39e072fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1e3ab5accd8d2416f2e22930ca2ab2dd5637db8etargetblank1e3ab5aa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -427,11 +427,6 @@ Great! You are using Git for version control. Tracking code development and conn
 <pre><code>
 Ignored files:
     Ignored:    output/
-
-Unstaged changes:
-    Modified:   README.md
-    Modified:   _workflowr.yml
-    Modified:   analysis/_site.yml
 
 </code></pre>
 <p>
@@ -475,6 +470,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/1e3ab5accd8d2416f2e22930ca2ab2dd5637db8e/analysis/hmdp.Rmd" target="_blank">1e3ab5a</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+wflow_publish(“hmdp.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/research-workflowr-template/2a2ae5775e4fe8e873bb58a0fbd1be53e357be5e/docs/hmdp.html" target="_blank">2a2ae57</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+First build of hmdp analysis.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/pcarbo/research-workflowr-template/blob/39e072f1330d41354c0913bfc3551ea2ca0370d3/analysis/hmdp.Rmd" target="_blank">39e072f</a>
 </td>
 <td>
@@ -494,7 +523,7 @@ wflow_publish(“hmdp.Rmd”)
 </div>
 </div>
 </div>
-<p><em>Add summary here.</em></p>
+<p>Here we examine data on bone-mineral density (BMD) from measurements taken in a “reference” mouse population, the Hybrid Mouse Diversity Panel.</p>
 <div id="load-packages" class="section level2">
 <h2>Load packages</h2>
 <p>Load a couple packages used in the analysis below.</p>
@@ -512,10 +541,45 @@ library(cowplot)</code></pre>
 <pre class="r"><code>ggplot(hmdp,aes(x = femur)) +
   geom_histogram(color = &quot;white&quot;,fill = &quot;darkblue&quot;,na.rm = TRUE) +
   labs(x = &quot;BMD (mg/cm^2)&quot;) +
-  theme_cowplot()
-# `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="figure/hmdp.Rmd/plot-bmd-females-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><em>Add text summarizing analysis.</em></p>
+  theme_cowplot()</code></pre>
+<p><img src="figure/hmdp.Rmd/plot-bmd-females-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-bmd-females-1">
+Past versions of plot-bmd-females-1.png
+</button>
+</p>
+<div id="fig-plot-bmd-females-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/2a2ae5775e4fe8e873bb58a0fbd1be53e357be5e/docs/figure/hmdp.Rmd/plot-bmd-females-1.png" target="_blank">2a2ae57</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
