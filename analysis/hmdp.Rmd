@@ -1,0 +1,47 @@
+---
+title: "Add title here"
+author: "Peter Carbonetto"
+date: February 11, 2020
+site: workflowr::wflow_site
+output: workflowr::wflow_html
+---
+
+*Add summary here.*
+
+```{r knitr, echo=FALSE}
+knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
+                      fig.align = "center")
+```
+
+Load packages
+-------------
+
+Load a couple packages used in the analysis below.
+
+```{r load-pkgs, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(cowplot)
+```
+
+Load data
+---------
+
+Read the BMD data from the HMDP study.
+
+```{r read-data}
+hmdp <- read.csv("../data/hmdp.csv",stringsAsFactors = FALSE)
+```
+
+Plot distribution of BMD
+------------------------
+
+Plot distribution of BMD in males (as measured in femurs).
+
+```{r plot-bmd-females}
+ggplot(hmdp,aes(x = femur)) +
+  geom_histogram(color = "white",fill = "darkblue",na.rm = TRUE) +
+  labs(x = "BMD (mg/cm^2)") +
+  theme_cowplot()
+```
+
+*Add text summarizing analysis.*
