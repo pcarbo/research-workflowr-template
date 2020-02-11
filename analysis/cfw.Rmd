@@ -17,7 +17,7 @@ knitr::opts_chunk$set(comment = "#",results = "hold",collapse = TRUE,
 Load packages
 -------------
 
-Load packages and function used in the analysis below.
+Load some packages and functions used in the analysis below.
 
 ```{r load-pkgs, warning=FALSE, message=FALSE}
 library(ggplot2)
@@ -45,4 +45,4 @@ plot_bmd_histogram(cfw,"BMD")
 ```
 
 From this histogram, we see that the CFW mice exhibit a "long tail" of
-abnormally high, or "osteopetrotic", bones.
+abnormally high BMD (*i.e.*, osteopetrotic bones).
