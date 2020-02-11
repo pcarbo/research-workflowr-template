@@ -416,17 +416,21 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1e3ab5accd8d2416f2e22930ca2ab2dd5637db8etargetblank1e3ab5aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/1e3ab5accd8d2416f2e22930ca2ab2dd5637db8e" target="_blank">1e3ab5a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetreed452c72964f7b1583bd32c529db5a6dd0fbfc819targetblankd452c72a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/research-workflowr-template/tree/d452c72964f7b1583bd32c529db5a6dd0fbfc819" target="_blank">d452c72</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetree1e3ab5accd8d2416f2e22930ca2ab2dd5637db8etargetblank1e3ab5aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarboresearchworkflowrtemplatetreed452c72964f7b1583bd32c529db5a6dd0fbfc819targetblankd452c72a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Ignored files:
-    Ignored:    output/
+Untracked files:
+    Untracked:  analysis/cfw.Rmd~
+
+Unstaged changes:
+    Modified:   analysis/index.Rmd
+    Modified:   code/README
 
 </code></pre>
 <p>
@@ -465,6 +469,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/d452c72964f7b1583bd32c529db5a6dd0fbfc819/analysis/hmdp.Rmd" target="_blank">d452c72</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+wflow_publish(“hmdp.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/17fa98558e9e3593c7039840688f603c58c8441d/analysis/hmdp.Rmd" target="_blank">17fa985</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Removed public directory.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/research-workflowr-template/957c904abc8ffebbb009dfd24395b28c85651871/docs/hmdp.html" target="_blank">957c904</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+<td>
+Made a few improvements to the hmdp analysis.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -526,9 +581,10 @@ wflow_publish(“hmdp.Rmd”)
 <p>Here we examine data on bone-mineral density (BMD) from measurements taken in a “reference” mouse population, the Hybrid Mouse Diversity Panel.</p>
 <div id="load-packages" class="section level2">
 <h2>Load packages</h2>
-<p>Load a couple packages used in the analysis below.</p>
+<p>Load packages and function used in the analysis below.</p>
 <pre class="r"><code>library(ggplot2)
-library(cowplot)</code></pre>
+library(cowplot)
+source(&quot;../code/plots.R&quot;)</code></pre>
 </div>
 <div id="load-data" class="section level2">
 <h2>Load data</h2>
@@ -542,7 +598,7 @@ library(cowplot)</code></pre>
   geom_histogram(color = &quot;white&quot;,fill = &quot;darkblue&quot;,na.rm = TRUE) +
   labs(x = &quot;BMD (mg/cm^2)&quot;) +
   theme_cowplot()</code></pre>
-<p><img src="figure/hmdp.Rmd/plot-bmd-females-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p><img src="figure/hmdp.Rmd/plot-bmd-females-1.png" width="432" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-bmd-females-1">
 Past versions of plot-bmd-females-1.png
@@ -565,6 +621,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/pcarbo/research-workflowr-template/blob/957c904abc8ffebbb009dfd24395b28c85651871/docs/figure/hmdp.Rmd/plot-bmd-females-1.png" target="_blank">957c904</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-02-11
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/pcarbo/research-workflowr-template/blob/2a2ae5775e4fe8e873bb58a0fbd1be53e357be5e/docs/figure/hmdp.Rmd/plot-bmd-females-1.png" target="_blank">2a2ae57</a>
